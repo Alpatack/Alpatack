@@ -1,0 +1,294 @@
+[
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_fragment_home.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_flame.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_flame.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_calendar.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_calendar.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_brain.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_brain.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_text_signup.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/text_signup.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_cat_social.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/cat_social.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_quest_off.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_quest_off.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_dialog_quest_detail.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/dialog_quest_detail.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_circle_white.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_circle_white.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_activity_welcome.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/activity_welcome.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_circle_outline.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_circle_outline.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_card_outline.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_card_outline.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_user_on.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_user_on.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_tile_done.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_tile_done.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_trophy_on.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_trophy_on.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_ribbon.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_ribbon.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_home_on.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_home_on.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_item_day.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/item_day.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_shield.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_shield.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_fragment_quest.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/fragment_quest.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_fragment_profile.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_activity_login.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_cake.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_cake.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_heart.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_heart.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_progress.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_progress.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_nav.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_nav.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_tile_todo.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_tile_todo.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_btn_square.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_btn_square.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_item_quest.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/item_quest.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_text_welcome.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/text_welcome.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_activity_signup.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_logo_purple.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/logo_purple.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_item_status.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/item_status.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_coin_card.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_coin_card.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_cat_spiritual.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/cat_spiritual.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_btn_outline.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_btn_outline.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_shop_off.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_shop_off.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_dialog_edit_profile.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/dialog_edit_profile.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_item_badge.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/item_badge.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_btn_light.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_btn_light.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_dialog_add_quest.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/dialog_add_quest.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_item_reward.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/item_reward.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_text_alpatack.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/text_alpatack.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/font_inter.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/font/inter.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_card_white.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_card_white.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_ic_check_white.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/ic_check_white.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_pill_outline.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_pill_outline.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_card.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_card.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_cat_physical.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/cat_physical.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_trophy_off.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_trophy_off.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_shop_top.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_shop_top.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_user_off.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_user_off.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_activity_main.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_sparkle.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_sparkle.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_shop_on.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_shop_on.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_pin.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_pin.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_pill_orange.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_pill_orange.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_star_light.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_star_light.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_field.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_field.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_dialog_add_wish.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/dialog_add_wish.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_quest_on.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_quest_on.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_fragment_shop.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/fragment_shop.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/font-v26_inter.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/font-v26/inter.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_nav_home_off.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/nav_home_off.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable_bg_btn_primary.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable/bg_btn_primary.xml"
+    },
+    {
+        "merged": "com.alpatack.questapp-debug-23:/layout_activity_signup.xml.flat",
+        "source": "com.alpatack.questapp-main-25:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_ic_flame_outline.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/ic_flame_outline.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_cat_discipline.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/cat_discipline.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/layout_fragment_ach.xml.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/layout/fragment_ach.xml"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_logo_white.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/logo_white.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_cat_mental.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/cat_mental.png"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/font_inter_variable.ttf.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/font/inter_variable.ttf"
+    },
+    {
+        "merged": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-debug-23:/drawable-nodpi_coin.png.flat",
+        "source": "/Users/ziru/.gradle/daemon/8.7/com.alpatack.questapp-main-25:/drawable-nodpi/coin.png"
+    }
+]

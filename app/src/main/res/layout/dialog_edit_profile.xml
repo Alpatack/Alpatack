@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card_white" android:orientation="vertical" android:padding="20dp">
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:text="Edit Profile" android:textColor="@color/purple_dark" android:textSize="17sp" android:textStyle="bold"/>
+    <TextView style="@style/Label" android:text="Full Name"/>
+    <EditText android:id="@+id/etFull" style="@style/Field" android:inputType="textPersonName" android:singleLine="true"/>
+    <TextView style="@style/Label" android:text="Username"/>
+    <EditText android:id="@+id/etUser" style="@style/Field" android:inputType="text" android:singleLine="true"/>
+    <TextView style="@style/Label" android:text="Birthday"/>
+    <EditText android:id="@+id/etBirth" style="@style/Field" android:hint="January 11, 2000" android:inputType="text" android:singleLine="true"/>
+    <TextView style="@style/Label" android:text="Address"/>
+    <EditText android:id="@+id/etAddr" style="@style/Field" android:inputType="text" android:singleLine="true"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center">
+        <TextView android:id="@+id/btnCancel" style="@style/PillLight" android:text="Cancel"/>
+        <TextView android:id="@+id/btnOk" style="@style/Pill" android:layout_marginLeft="12dp" android:text="Save!"/>
+    </LinearLayout>
+</LinearLayout>

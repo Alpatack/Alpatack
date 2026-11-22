@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/purple">
+    <ImageView android:layout_width="380dp" android:layout_height="420dp" android:layout_gravity="bottom|start" android:layout_marginLeft="-90dp" android:layout_marginBottom="-30dp" android:alpha="0.1" android:scaleType="fitCenter" android:src="@drawable/logo_white" android:importantForAccessibility="no"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingLeft="16dp" android:paddingRight="16dp" android:paddingBottom="24dp">
+            <include layout="@layout/include_header"/>
+            <FrameLayout android:layout_width="96dp" android:layout_height="96dp" android:layout_gravity="center_horizontal" android:layout_marginTop="16dp">
+                <ImageView android:id="@+id/ivAvatar" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg_circle_white" android:contentDescription="Profile photo"/>
+                <ImageView android:id="@+id/btnCamera" android:layout_width="28dp" android:layout_height="28dp" android:layout_gravity="bottom|end" android:background="@drawable/bg_badge_cam" android:padding="6dp" android:src="@drawable/ic_camera" android:contentDescription="Change photo"/>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:orientation="vertical" android:background="@drawable/bg_group" android:padding="12dp" android:paddingBottom="16dp">
+                <TextView style="@style/SettingsLabel" android:layout_marginTop="0dp" android:text="FULL NAME"/>
+                <EditText android:id="@+id/etFull" style="@style/SettingsField" android:hint="full name" android:inputType="textPersonName"/>
+                <TextView style="@style/SettingsLabel" android:text="USERNAME"/>
+                <EditText android:id="@+id/etUser" style="@style/SettingsField" android:hint="username" android:inputType="text"/>
+                <TextView style="@style/SettingsLabel" android:text="BIRTHDAY"/>
+                <TextView android:id="@+id/etBirth" style="@style/SettingsField" android:gravity="center_vertical" android:hint="Select your birthday"/>
+                <TextView style="@style/SettingsLabel" android:text="ADDRESS"/>
+                <EditText android:id="@+id/etAddr" style="@style/SettingsField" android:hint="Barangay, City, Province" android:inputType="textPostalAddress"/>
+            </LinearLayout>
+            <TextView android:id="@+id/btnSave" style="@style/SaveBtn" android:layout_gravity="center_horizontal" android:layout_marginTop="32dp"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

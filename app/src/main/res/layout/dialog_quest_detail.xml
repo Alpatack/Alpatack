@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card_white">
+<LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_card_outline" android:gravity="center_vertical" android:padding="10dp">
+        <ImageView android:id="@+id/ivIcon" android:layout_width="52dp" android:layout_height="52dp"/>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="end">
+            <TextView android:id="@+id/tvCat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/purple" android:textSize="11sp" android:textStyle="bold"/>
+            <TextView android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/purple_dark" android:textSize="17sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginRight="6dp" android:background="@drawable/bg_card_outline" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Status" android:textColor="@color/purple" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/purple_dark" android:textSize="26sp" android:textStyle="bold"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginLeft="6dp" android:background="@drawable/bg_card_outline" android:gravity="center" android:orientation="vertical" android:padding="10dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reward" android:textColor="@color/purple" android:textSize="12sp"/>
+            <TextView android:id="@+id/tvReward" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/purple_dark" android:textSize="26sp" android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:background="@drawable/bg_card_outline" android:orientation="vertical" android:padding="12dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Description / Steps" android:textColor="@color/purple_dark" android:textSize="13sp" android:textStyle="bold"/>
+        <TextView android:id="@+id/tvDesc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:textColor="@color/purple" android:textSize="12sp"/>
+        <LinearLayout android:id="@+id/llSteps" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:gravity="center">
+        <TextView android:id="@+id/btnClose" style="@style/PillLight" android:background="@drawable/bg_btn_outline" android:text="Close" android:paddingLeft="32dp" android:paddingRight="32dp"/>
+        <TextView android:id="@+id/btnComplete" style="@style/Pill" android:layout_marginLeft="12dp" android:text="Complete!" android:paddingLeft="32dp" android:paddingRight="32dp"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

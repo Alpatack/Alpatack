@@ -76,9 +76,8 @@ The following table summarizes the packages represented in the UML diagram.
 
 The diagram below shows the application's classes, attributes, methods, and relationships. Click the image to open it separately.
 
-img_src = ("UMLDiagram.png")
+<img src = "UMLDiagram.png">
 
-[Open full-size UML diagram]("UMLDiagram.png")
 
 ### Main Components
 

@@ -19,6 +19,10 @@ public class Player {
     private int coin;
     private int dailyStreak;
     private int questsCompleted;
+<<<<<<< HEAD
+=======
+    private int dailyQuestsCompleted;
+>>>>>>> bae7d0b (Stat features enhanced)
 
     // constructor for NEW Users (Default initial values)
     public Player(String name) {
@@ -30,6 +34,10 @@ public class Player {
         this.categoryExp = new int[Category.values().length];
         this.coin = 0;
         this.dailyStreak = 0;
+<<<<<<< HEAD
+=======
+        this.dailyQuestsCompleted = 0;
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 
     // constructor for RETURNING Users (Loading loaded/saved data)
@@ -42,6 +50,10 @@ public class Player {
         this.categoryExp = categoryExp;
         this.coin = coin;
         this.dailyStreak = dailyStreak;
+<<<<<<< HEAD
+=======
+        this.dailyQuestsCompleted = 0;
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 
     // Helper method to convert category name into array index
@@ -77,6 +89,20 @@ public class Player {
         coin += amount;
     }
 
+<<<<<<< HEAD
+=======
+    // Lifetime XP across all categories (does not reset on level-up)
+    public int getTotalExp() {
+        int total = currentExp;
+        int need = 100;                 // XP needed for level 1 -> 2 (+50 each level after)
+        for (int i = 1; i < level; i++) {
+            total += need;
+            need += 50;
+        }
+        return total;
+    }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     public boolean spendCoins(int amount) {
         if (coin >= amount) {
             coin -= amount;
@@ -100,10 +126,42 @@ public class Player {
     public int getCategoryExp(Category c) { return getCategoryExp(c.getIndex()); }
 
     public int getCategoryLevel(int index) {
+<<<<<<< HEAD
         return 1 + getCategoryExp(index) / 50;
     } // -------temppp
     public int getCategoryLevel(Category c) { return getCategoryLevel(c.getIndex()); }
 
+=======
+        int exp = getCategoryExp(index);
+        int level = 1;
+        int needed = 100;
+        while (exp >= needed) {
+            exp -= needed;
+            level++;
+            needed += 50;
+        }
+        return level;
+    }
+    public int getCategoryLevel(Category c) { return getCategoryLevel(c.getIndex()); }
+
+    public int getCategoryCurrentExp(int index) {
+        int exp = getCategoryExp(index);
+        int needed = 100;
+        while (exp >= needed) {
+            exp -= needed;
+            needed += 50;
+        }
+        return exp;
+    }
+    public int getCategoryCurrentExp(Category c) { return getCategoryCurrentExp(c.getIndex()); }
+
+    public int getCategoryMaxExp(int index) {
+        int level = getCategoryLevel(index);
+        return 100 + (level - 1) * 50;
+    }
+    public int getCategoryMaxExp(Category c) { return getCategoryMaxExp(c.getIndex()); }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     // getters
     public String getName() { return name; }
     public int getLevel() { return level; }
@@ -113,6 +171,11 @@ public class Player {
     public int[] getCategoryExp() { return categoryExp; }
     public int getCoin() { return coin; }
     public int getDailyStreak() { return dailyStreak; }
+<<<<<<< HEAD
+=======
+    public int getDailyQuestsCompleted() { return dailyQuestsCompleted; }
+    public void setDailyQuestsCompleted(int n) { dailyQuestsCompleted = n; }
+>>>>>>> bae7d0b (Stat features enhanced)
 
     // setters
     public void setName(String name) { this.name = name; }

@@ -8,7 +8,11 @@ public class AlpatackDB extends SQLiteOpenHelper {
     private static final String DB_NAME = "alpatack.db";
 
     // paltan to after each change ng codes sa file na to: DB_VERSION++;
+<<<<<<< HEAD
     private static final int DB_VERSION = 3;
+=======
+    private static final int DB_VERSION = 6;
+>>>>>>> bae7d0b (Stat features enhanced)
 
     public AlpatackDB(Context c) {
         super(c, DB_NAME, null, DB_VERSION);
@@ -27,7 +31,11 @@ public class AlpatackDB extends SQLiteOpenHelper {
                 "full_name TEXT, birthday TEXT, address TEXT, joined TEXT, last_checkin TEXT, " +
                 "quest_date TEXT, logged_in INTEGER, phone TEXT)");
         db.execSQL("CREATE TABLE player (user_id INTEGER PRIMARY KEY, name TEXT, level INTEGER, " +
+<<<<<<< HEAD
                 "current_exp INTEGER, max_exp INTEGER, coins INTEGER, streak INTEGER, quests_completed INTEGER)");
+=======
+                "current_exp INTEGER, max_exp INTEGER, coins INTEGER, streak INTEGER, quests_completed INTEGER, daily_quests_completed INTEGER DEFAULT 0)");
+>>>>>>> bae7d0b (Stat features enhanced)
         db.execSQL("CREATE TABLE category_exp (user_id INTEGER, idx INTEGER, exp INTEGER, " +
                 "PRIMARY KEY (user_id, idx))");
         db.execSQL("CREATE TABLE quests (id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER NOT NULL, " +
@@ -45,6 +53,7 @@ public class AlpatackDB extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
+<<<<<<< HEAD
         if (oldV >= 2) {   // 2 -> 3 only adds the contact number, so keep everyone's data
             if (oldV < 3) db.execSQL("ALTER TABLE users ADD COLUMN phone TEXT");
             return;
@@ -52,5 +61,19 @@ public class AlpatackDB extends SQLiteOpenHelper {
         String[] tables = {"quest_steps", "quests", "category_exp", "player", "users", "rewards", "achievements"};
         for (String t : tables) db.execSQL("DROP TABLE IF EXISTS " + t);
         onCreate(db);
+=======
+        if (oldV < 2) {
+            String[] tables = {"quest_steps", "quests", "category_exp", "player", "users", "rewards", "achievements"};
+            for (String t : tables) db.execSQL("DROP TABLE IF EXISTS " + t);
+            onCreate(db);
+            return;
+        }
+        if (oldV < 3) {
+            try { db.execSQL("ALTER TABLE users ADD COLUMN phone TEXT"); } catch (Exception ignored) {}
+        }
+        if (oldV < 5) {
+            try { db.execSQL("ALTER TABLE player ADD COLUMN daily_quests_completed INTEGER DEFAULT 0"); } catch (Exception ignored) {}
+        }
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 }

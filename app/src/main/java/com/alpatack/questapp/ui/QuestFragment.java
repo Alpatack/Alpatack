@@ -19,6 +19,11 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+import android.os.Handler;
+import android.os.Looper;
+>>>>>>> bae7d0b (Stat features enhanced)
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,11 +31,28 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import java.util.ArrayList;
+<<<<<<< HEAD
 import java.util.Arrays;
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
 
 public class QuestFragment extends Fragment {
     private View root;
     private LinearLayout list;
+<<<<<<< HEAD
+=======
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private String shownDate = "";
+
+    private final Runnable dayWatcher = new Runnable() {
+        @Override
+        public void run() {
+            if (!AppState.get(requireContext()).today().equals(shownDate)) bind();
+            handler.postDelayed(this, 60_000);
+        }
+    };
+
+>>>>>>> bae7d0b (Stat features enhanced)
 
     @Nullable
     @Override
@@ -38,6 +60,11 @@ public class QuestFragment extends Fragment {
         root = inflater.inflate(R.layout.fragment_quest, c, false);
         list = root.findViewById(R.id.llQuests);
         root.findViewById(R.id.btnAdd).setOnClickListener(v -> showAdd());
+<<<<<<< HEAD
+=======
+        ((TextView) root.findViewById(R.id.tvWarning)).setText(Ui.boldLabel("WARNING: ",
+                "Failure to complete the daily quest will result in an appropriate penalty."));
+>>>>>>> bae7d0b (Stat features enhanced)
         return root;
     }
 
@@ -45,14 +72,33 @@ public class QuestFragment extends Fragment {
     public void onResume() {
         super.onResume();
         bind();
+<<<<<<< HEAD
+=======
+        handler.postDelayed(dayWatcher, 60_000);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        handler.removeCallbacks(dayWatcher);
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 
     private void bind() {
         AppState s = AppState.get(requireContext());
+<<<<<<< HEAD
+=======
+        s.rollDaily();
+        shownDate = s.today();
+>>>>>>> bae7d0b (Stat features enhanced)
         ((TextView) root.findViewById(R.id.tvStreak)).setText(String.valueOf(s.player.getDailyStreak()));
         list.removeAllViews();
         ArrayList<Quest> quests = s.manager.getQuestList();
         root.findViewById(R.id.tvEmpty).setVisibility(quests.isEmpty() ? View.VISIBLE : View.GONE);
+<<<<<<< HEAD
+=======
+        quests.sort((a, b) -> Boolean.compare(a.isCompleted(), b.isCompleted()));
+>>>>>>> bae7d0b (Stat features enhanced)
         for (Quest q : quests) {
             View row = getLayoutInflater().inflate(R.layout.item_quest, list, false);
             ((ImageView) row.findViewById(R.id.ivIcon)).setImageResource(Ui.catIcon(q.getCategory()));
@@ -60,11 +106,22 @@ public class QuestFragment extends Fragment {
             TextView title = row.findViewById(R.id.tvTitle);
             title.setText(q.getTitle());
             ((TextView) row.findViewById(R.id.tvXp)).setText("+" + q.calculateExp() + "xp");
+<<<<<<< HEAD
             if (q.isCompleted()) {
                 row.setAlpha(0.55f);
                 title.setPaintFlags(title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
             }
             row.setOnClickListener(v -> showDetail(q));
+=======
+            TextView done = row.findViewById(R.id.btnDone);
+            if (q.isCompleted()) {
+                row.setAlpha(0.55f);
+                title.setPaintFlags(title.getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
+                done.setClickable(false);
+            } else {
+                done.setOnClickListener(v -> completeQuest(q));
+            }
+>>>>>>> bae7d0b (Stat features enhanced)
             row.setOnLongClickListener(v -> {
                 new AlertDialog.Builder(requireContext())
                         .setTitle("Delete quest?")
@@ -81,6 +138,7 @@ public class QuestFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
     private void showDetail(Quest q) {
         AppState s = AppState.get(requireContext());
         View v = getLayoutInflater().inflate(R.layout.dialog_quest_detail, null);
@@ -137,15 +195,40 @@ public class QuestFragment extends Fragment {
         d.show();
     }
 
+=======
+    // Used by the DONE! button on a card and by the Complete button in the detail popup.
+    private void completeQuest(Quest q) {
+        AppState s = AppState.get(requireContext());
+        s.rollDaily();
+        int exp = q.calculateExp();
+        int before = s.player.getLevel();
+        s.manager.completeQuest(s.manager.getQuestList().indexOf(q));
+        s.save();
+        String msg = "+" + exp + " XP";
+        if (s.player.getLevel() > before) msg += "  Level up!";
+        Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
+        bind();
+    }
+
+
+>>>>>>> bae7d0b (Stat features enhanced)
     private void showAdd() {
         View v = getLayoutInflater().inflate(R.layout.dialog_add_quest, null);
         Dialog d = Ui.dialog(requireContext(), v);
         Spinner sp = v.findViewById(R.id.spCategory);
         String[] cats = {"PHYSICAL", "MENTAL", "SOCIAL", "SPIRITUAL", "DISCIPLINE"};
+<<<<<<< HEAD
         sp.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_dropdown_item, cats));
         EditText title = v.findViewById(R.id.etTitle);
         EditText xp = v.findViewById(R.id.etXp);
         EditText stepsBox = v.findViewById(R.id.etSteps);
+=======
+        ArrayAdapter<String> ad = new ArrayAdapter<>(requireContext(), R.layout.spinner_item, cats);
+        ad.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        sp.setAdapter(ad);
+        EditText title = v.findViewById(R.id.etTitle);
+        EditText xp = v.findViewById(R.id.etXp);
+>>>>>>> bae7d0b (Stat features enhanced)
 
         v.findViewById(R.id.btnCancel).setOnClickListener(x -> d.dismiss());
         v.findViewById(R.id.btnOk).setOnClickListener(x -> {
@@ -158,6 +241,7 @@ public class QuestFragment extends Fragment {
             try {
                 exp = Integer.parseInt(xp.getText().toString().trim());
             } catch (NumberFormatException ignored) { }
+<<<<<<< HEAD
             ArrayList<String> steps = new ArrayList<>();
             for (String line : stepsBox.getText().toString().split("\n")) {
                 if (!line.trim().isEmpty()) steps.add(line.trim());
@@ -165,6 +249,18 @@ public class QuestFragment extends Fragment {
             AppState s = AppState.get(requireContext());
             CustomQuest q = new CustomQuest(t, "Custom quest", ((String) sp.getSelectedItem()).toLowerCase(), "custom", exp);
             q.setSteps(steps);
+=======
+            if (exp <= 0) {
+                Toast.makeText(requireContext(), "XP must be between 1 and 100", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (exp > 100) {
+                Toast.makeText(requireContext(), "XP is capped at 100 per quest", Toast.LENGTH_SHORT).show();
+                exp = 100;
+            }
+            AppState s = AppState.get(requireContext());
+            CustomQuest q = new CustomQuest(t, "Custom quest", ((String) sp.getSelectedItem()).toLowerCase(), "custom", exp);
+>>>>>>> bae7d0b (Stat features enhanced)
             s.manager.addQuest(q);
             s.save();
             d.dismiss();

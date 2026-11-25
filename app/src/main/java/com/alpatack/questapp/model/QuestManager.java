@@ -93,6 +93,10 @@ public class QuestManager{
                 player.addExp(q.getCategory(), earnedExp);
                 player.addCoins(earnedExp / 2); // coins so rewards can be redeemed
                 player.addQuestCompleted();
+<<<<<<< HEAD
+=======
+                player.setDailyQuestsCompleted(player.getDailyQuestsCompleted() + 1);
+>>>>>>> bae7d0b (Stat features enhanced)
                 checkAchievements();
             }
         }

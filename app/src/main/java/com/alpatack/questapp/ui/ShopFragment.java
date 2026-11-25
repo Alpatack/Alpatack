@@ -11,6 +11,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+<<<<<<< HEAD
+=======
+import android.widget.ImageView;
+>>>>>>> bae7d0b (Stat features enhanced)
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -58,6 +62,10 @@ public class ShopFragment extends Fragment {
             }
             View card = getLayoutInflater().inflate(R.layout.item_reward, row, false);
             ((TextView) card.findViewById(R.id.tvName)).setText(r.getName());
+<<<<<<< HEAD
+=======
+            ((ImageView) card.findViewById(R.id.ivIcon)).setImageResource(iconFor(r.getDescription()));
+>>>>>>> bae7d0b (Stat features enhanced)
             TextView price = card.findViewById(R.id.tvPrice);
             price.setText(r.getCost() + " COINS\nREDEEM");
             price.setOnClickListener(v -> {
@@ -89,7 +97,11 @@ public class ShopFragment extends Fragment {
                         .show();
                 return true;
             });
+<<<<<<< HEAD
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, Ui.dp(requireContext(), 124), 1f);
+=======
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, Ui.dp(requireContext(), 140), 1f);
+>>>>>>> bae7d0b (Stat features enhanced)
             lp.setMargins(m, m, m, m);
             row.addView(card, lp);
         }
@@ -105,12 +117,35 @@ public class ShopFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // The reward's category (kept in its description) decides which icon the card shows.
+    private int iconFor(String category) {
+        if (category == null) return R.drawable.ic_cat_gift;
+        switch (category) {
+            case "Food": return R.drawable.ic_cat_food;
+            case "Travel": return R.drawable.ic_cat_travel;
+            case "Clothing": return R.drawable.ic_cat_clothing;
+            case "Shopping": return R.drawable.ic_cat_shopping;
+            case "Tech": return R.drawable.ic_cat_tech;
+            default: return R.drawable.ic_cat_gift;
+        }
+    }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     private void showAdd() {
         View v = getLayoutInflater().inflate(R.layout.dialog_add_wish, null);
         Dialog d = Ui.dialog(requireContext(), v);
         Spinner sp = v.findViewById(R.id.spCategory);
+<<<<<<< HEAD
         sp.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_dropdown_item,
                 new String[]{"Clothing", "Shopping", "Food", "Tech", "Travel", "Gift"}));
+=======
+        ArrayAdapter<String> ad = new ArrayAdapter<>(requireContext(), R.layout.spinner_item,
+                new String[]{"Clothing", "Shopping", "Food", "Tech", "Travel", "Gift"});
+        ad.setDropDownViewResource(R.layout.spinner_dropdown_item);
+        sp.setAdapter(ad);
+>>>>>>> bae7d0b (Stat features enhanced)
         EditText name = v.findViewById(R.id.etName);
         EditText price = v.findViewById(R.id.etPrice);
         v.findViewById(R.id.btnCancel).setOnClickListener(x -> d.dismiss());

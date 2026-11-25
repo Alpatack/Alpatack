@@ -4,8 +4,15 @@ import com.alpatack.questapp.R;
 import com.alpatack.questapp.data.AppState;
 
 import android.app.DatePickerDialog;
+<<<<<<< HEAD
 import android.net.Uri;
 import android.os.Bundle;
+=======
+import android.app.Dialog;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+>>>>>>> bae7d0b (Stat features enhanced)
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,8 +47,13 @@ public class ProfileDetailsActivity extends AppCompatActivity {
 
         avatar = findViewById(R.id.ivAvatar);
         Ui.loadAvatar(this, avatar);
+<<<<<<< HEAD
         avatar.setOnClickListener(v -> picker.launch("image/*"));
         findViewById(R.id.btnCamera).setOnClickListener(v -> picker.launch("image/*"));
+=======
+        avatar.setOnClickListener(v -> chooseProfile());
+        findViewById(R.id.btnCamera).setOnClickListener(v -> chooseProfile());
+>>>>>>> bae7d0b (Stat features enhanced)
 
         EditText full = findViewById(R.id.etFull);
         EditText user = findViewById(R.id.etUser);
@@ -68,6 +80,37 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
+=======
+    // "Choose Profile" popup: gallery, or one of the built-in alpacas, then Done.
+    private void chooseProfile() {
+        View v = getLayoutInflater().inflate(R.layout.dialog_choose_profile, null);
+        Dialog d = Ui.dialog(this, v);
+        int[] ids = {R.id.p1, R.id.p2, R.id.p3, R.id.p4, R.id.p5};
+        int[] pics = {R.drawable.avatar_alpaca_1, R.drawable.avatar_alpaca_2, R.drawable.avatar_alpaca_3,
+                R.drawable.avatar_alpaca_4, R.drawable.avatar_alpaca_5};
+        int[] picked = {-1};
+        for (int i = 0; i < ids.length; i++) {
+            final int idx = i;
+            v.findViewById(ids[i]).setOnClickListener(x -> {
+                picked[0] = idx;
+                for (int k = 0; k < ids.length; k++) {
+                    v.findViewById(ids[k]).setBackgroundResource(k == idx ? R.drawable.bg_avatar_selected : R.drawable.bg_avatar_idle);
+                }
+            });
+        }
+        v.findViewById(R.id.pGallery).setOnClickListener(x -> {
+            d.dismiss();
+            picker.launch("image/*");
+        });
+        v.findViewById(R.id.btnDone).setOnClickListener(x -> {
+            if (picked[0] >= 0 && Ui.savePreset(this, pics[picked[0]])) Ui.loadAvatar(this, avatar);
+            d.dismiss();
+        });
+        d.show();
+    }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     private void pickBirthday(TextView birth) {
         Calendar c = Calendar.getInstance();
         c.set(2000, Calendar.JANUARY, 1);   // where the picker opens if nothing is set yet

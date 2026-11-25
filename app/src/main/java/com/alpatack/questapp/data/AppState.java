@@ -35,6 +35,10 @@ public class AppState {
     public Player player;
     public QuestManager manager;
     public boolean loggedIn;
+<<<<<<< HEAD
+=======
+    public boolean isAdmin = false;
+>>>>>>> bae7d0b (Stat features enhanced)
     public String fullName = "", username = "", email = "", phone = "", birthday = "", address = "", joined = "";
     public String lastCheckin = "", questDate = "";
 
@@ -140,11 +144,20 @@ public class AppState {
         a.add(new Achievement("Adept", "Reach level 5", "level", 5, 50));
         a.add(new Achievement("Veteran", "Reach level 10", "level", 10, 100));
         ArrayList<Reward> r = manager.getRewardList();
+<<<<<<< HEAD
         r.add(new Reward("Snack", "Food", 100));
         r.add(new Reward("Movie", "Gift", 100));
         r.add(new Reward("Clothing", "Clothing", 100));
         r.add(new Reward("Mall", "Shopping", 100));
         r.add(new Reward("Shopping", "Shopping", 100));
+=======
+        r.add(new Reward("Food", "Food", 100));
+        r.add(new Reward("Taiwan", "Travel", 100));
+        r.add(new Reward("Hoodie", "Clothing", 100));
+        r.add(new Reward("Shopping", "Shopping", 100));
+        r.add(new Reward("iPhone 18", "Tech", 100));
+        r.add(new Reward("Necklace", "Gift", 100));
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 
     // -setting dateformat
@@ -159,12 +172,20 @@ public class AppState {
     }
 
     // New day: new daily quests, and a missed day breaks the streak.
+<<<<<<< HEAD
     private void rollDaily() {
+=======
+    public void rollDaily() {
+>>>>>>> bae7d0b (Stat features enhanced)
         boolean changed = false;
         if (!today().equals(questDate)) {
             manager.getQuestList().removeIf(q -> q instanceof PredefinedQuest);
             manager.generateDailyQuests();
             questDate = today();
+<<<<<<< HEAD
+=======
+            player.setDailyQuestsCompleted(0); // reset daily quest completions
+>>>>>>> bae7d0b (Stat features enhanced)
             changed = true;
         }
         if (!lastCheckin.equals(today()) && !lastCheckin.equals(yesterday()) && player.getDailyStreak() > 0) {
@@ -189,9 +210,13 @@ public class AppState {
     }
 
     public int totalXp() {
+<<<<<<< HEAD
         int t = 0;
         for (int v : player.getCategoryExp()) t += v;
         return t;
+=======
+        return player.getTotalExp();
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 
     // persistence (SQLite)
@@ -223,11 +248,21 @@ public class AppState {
             p.put("coins", player.getCoin());
             p.put("streak", player.getDailyStreak());
             p.put("quests_completed", player.getQuestsCompleted());
+<<<<<<< HEAD
             db.insertWithOnConflict("player", null, p, SQLiteDatabase.CONFLICT_REPLACE);
 
             db.delete("category_exp", null, null);   // steps are deleted too (ON DELETE CASCADE)
             for (Category cat : Category.values()) {
                 ContentValues c = new ContentValues();
+=======
+            p.put("daily_quests_completed", player.getDailyQuestsCompleted());
+            db.insertWithOnConflict("player", null, p, SQLiteDatabase.CONFLICT_REPLACE);
+
+            db.delete("category_exp", "user_id = ?", uid);   // steps are deleted too (ON DELETE CASCADE)
+            for (Category cat : Category.values()) {
+                ContentValues c = new ContentValues();
+                c.put("user_id", userId);
+>>>>>>> bae7d0b (Stat features enhanced)
                 c.put("idx", cat.getIndex());
                 c.put("exp", player.getCategoryExp(cat));
                 db.insert("category_exp", null, c);
@@ -350,6 +385,10 @@ public class AppState {
         player = new Player(str(p, "name"), num(p, "level"), num(p, "current_exp"), num(p, "max_exp"),
                 catExp, num(p, "coins"), num(p, "streak"));
         player.setQuestsCompleted(num(p, "quests_completed"));
+<<<<<<< HEAD
+=======
+        player.setDailyQuestsCompleted(num(p, "daily_quests_completed"));
+>>>>>>> bae7d0b (Stat features enhanced)
         p.close();
 
         manager = new QuestManager(player);
@@ -441,6 +480,17 @@ public class AppState {
         return true;
     }
 
+<<<<<<< HEAD
+=======
+    public boolean passwordMatches(String password) {
+        Cursor c = dbh.getReadableDatabase().query("users", new String[]{"pass_hash"}, "id = ?",
+                new String[]{String.valueOf(userId)}, null, null, null);
+        boolean ok = c.moveToFirst() && hash(password).equals(c.getString(0));
+        c.close();
+        return ok;
+    }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     private SharedPreferences prefs() { return ctx.getSharedPreferences("alpatack_settings", Context.MODE_PRIVATE); }
 
     public boolean pushEnabled() { return prefs().getBoolean("push_" + userId, true); }

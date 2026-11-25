@@ -91,6 +91,23 @@ public class Ui {
         }
     }
 
+<<<<<<< HEAD
+=======
+    // Uses one of the built-in alpaca pictures as the profile photo.
+    public static boolean savePreset(Context c, int drawableRes) {
+        try {
+            Bitmap b = BitmapFactory.decodeResource(c.getResources(), drawableRes);
+            if (b == null) return false;
+            try (FileOutputStream out = new FileOutputStream(AppState.get(c).avatarFile(c))) {
+                b.compress(Bitmap.CompressFormat.PNG, 100, out);
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+>>>>>>> bae7d0b (Stat features enhanced)
     public static CharSequence boldLabel(String label, String rest) {
         SpannableString s = new SpannableString(label + rest);
         s.setSpan(new StyleSpan(Typeface.BOLD), 0, label.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

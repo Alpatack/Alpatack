@@ -6,6 +6,7 @@ import com.alpatack.questapp.model.*;
 
 import android.app.Dialog;
 import android.content.Intent;
+<<<<<<< HEAD
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -14,16 +15,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+=======
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.FrameLayout;
+>>>>>>> bae7d0b (Stat features enhanced)
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+<<<<<<< HEAD
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+<<<<<<< HEAD
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -37,11 +53,20 @@ public class ProfileFragment extends Fragment {
                 if (uri != null) savePhoto(uri);
             });
 
+=======
+public class ProfileFragment extends Fragment {
+    private View root;
+
+>>>>>>> bae7d0b (Stat features enhanced)
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup c, @Nullable Bundle b) {
         root = inflater.inflate(R.layout.fragment_profile, c, false);
+<<<<<<< HEAD
         root.findViewById(R.id.ivAvatar).setOnClickListener(v -> picker.launch("image/*"));
+=======
+        root.findViewById(R.id.ivAvatar).setOnClickListener(v -> showAvatarOverlay());
+>>>>>>> bae7d0b (Stat features enhanced)
         root.findViewById(R.id.btnSettings).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), SettingsActivity.class)));
         return root;
@@ -63,7 +88,11 @@ public class ProfileFragment extends Fragment {
         ((TextView) root.findViewById(R.id.tvAddress)).setText(Ui.boldLabel("Address\n", s.address.isEmpty() ? "Not set" : s.address));
         ((TextView) root.findViewById(R.id.tvJoined)).setText(Ui.boldLabel("Joined\n", s.joined));
         ((TextView) root.findViewById(R.id.tvLvl)).setText(String.format("LVL %02d", p.getLevel()));
+<<<<<<< HEAD
         ((TextView) root.findViewById(R.id.tvTotal)).setText(s.totalXp() + " XP");
+=======
+        ((TextView) root.findViewById(R.id.tvTotal)).setText(p.getTotalExp() + " XP");
+>>>>>>> bae7d0b (Stat features enhanced)
         ProgressBar bar = root.findViewById(R.id.bar);
         bar.setMax(p.getMaxExp());
         bar.setProgress(p.getCurrentExp());
@@ -84,7 +113,35 @@ public class ProfileFragment extends Fragment {
         root.findViewById(id).setAlpha(got ? 1f : 0.3f);
     }
 
+<<<<<<< HEAD
     private void savePhoto(Uri uri) {
         if (Ui.saveAvatar(requireContext(), uri)) bind();
+=======
+    private void showAvatarOverlay() {
+        Dialog d = new Dialog(requireContext());
+        d.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        FrameLayout container = new FrameLayout(requireContext());
+        container.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+
+        ImageView preview = new ImageView(requireContext());
+        int size = Ui.dp(requireContext(), 260);
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(size, size);
+        params.gravity = Gravity.CENTER;
+        preview.setLayoutParams(params);
+
+        Ui.loadAvatar(requireContext(), preview);
+        container.addView(preview);
+
+        d.setContentView(container);
+        if (d.getWindow() != null) {
+            d.getWindow().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#B3000000")));
+            d.getWindow().setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        }
+        d.setCanceledOnTouchOutside(true);
+        container.setOnClickListener(v -> d.dismiss());
+        preview.setOnClickListener(v -> d.dismiss());
+        d.show();
+>>>>>>> bae7d0b (Stat features enhanced)
     }
 }

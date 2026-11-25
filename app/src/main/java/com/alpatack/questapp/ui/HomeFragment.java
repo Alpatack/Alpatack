@@ -45,7 +45,11 @@ public class HomeFragment extends Fragment {
         ((TextView) root.findViewById(R.id.tvName)).setText(s.fullName.isEmpty() ? s.username : s.fullName);
         ((TextView) root.findViewById(R.id.tvUser)).setText("@" + s.username);
         ((TextView) root.findViewById(R.id.tvLvl)).setText(String.format("LVL %02d", p.getLevel()));
+<<<<<<< HEAD
         ((TextView) root.findViewById(R.id.tvTotal)).setText(s.totalXp() + " XP");
+=======
+        ((TextView) root.findViewById(R.id.tvTotal)).setText(p.getTotalExp() + " XP");
+>>>>>>> bae7d0b (Stat features enhanced)
         ProgressBar bar = root.findViewById(R.id.bar);
         bar.setMax(p.getMaxExp());
         bar.setProgress(p.getCurrentExp());
@@ -62,6 +66,12 @@ public class HomeFragment extends Fragment {
             ((ImageView) row.findViewById(R.id.ivIcon)).setImageResource(Ui.catIcon(cats[i]));
             String status = "Level " + p.getCategoryLevel(i);
             ((TextView) row.findViewById(R.id.tvText)).setText(Ui.boldLabel(labels[i], status));
+<<<<<<< HEAD
+=======
+            ProgressBar barCat = row.findViewById(R.id.barCat);
+            barCat.setMax(p.getCategoryMaxExp(i));
+            barCat.setProgress(p.getCategoryCurrentExp(i));
+>>>>>>> bae7d0b (Stat features enhanced)
             list.addView(row);
         }
         ((TextView) root.findViewById(R.id.tvQuote)).setText(QUOTES[new Random().nextInt(QUOTES.length)]);

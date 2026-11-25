@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/white" android:clipToPadding="false" android:paddingBottom="110dp">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingTop="20dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:paddingLeft="20dp" android:paddingRight="20dp">
+            <ImageView android:layout_width="36dp" android:layout_height="36dp" android:src="@drawable/ic_sparkle" android:importantForAccessibility="no"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginLeft="4dp"
+                android:text="Quest" android:textColor="@color/purple" android:textSize="34sp" android:textStyle="bold"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_btn_light" android:gravity="center_vertical" android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="6dp" android:paddingBottom="6dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:src="@drawable/ic_flame" android:importantForAccessibility="no"/>
+                <TextView android:id="@+id/tvStreak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:textColor="@color/purple" android:textSize="20sp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:gravity="top" android:paddingRight="20dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="104dp" android:adjustViewBounds="true" android:scaleType="fitStart" android:src="@drawable/mascot_peek" android:importantForAccessibility="no"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginLeft="2dp" android:layout_marginTop="16dp">
+                <ImageView android:layout_width="10dp" android:layout_height="14dp" android:layout_marginRight="-1dp" android:src="@drawable/ic_bubble_tail" android:importantForAccessibility="no"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:background="@drawable/bg_bubble"
+                    android:paddingLeft="12dp" android:paddingRight="12dp" android:paddingTop="8dp" android:paddingBottom="8dp"
+                    android:text="Quest has arrived!" android:textColor="@color/purple" android:textSize="13sp" android:textStyle="bold"/>
+            </LinearLayout>
+            <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+            <TextView android:id="@+id/btnAdd" style="@style/Pill" android:layout_width="84dp" android:layout_marginTop="14dp" android:elevation="4dp" android:text="+" android:textSize="24sp" android:paddingTop="2dp" android:paddingBottom="2dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/llQuests" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" android:paddingLeft="20dp" android:paddingRight="20dp"/>
+        <TextView android:id="@+id/tvEmpty" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center" android:padding="32dp"
+            android:paddingLeft="20dp" android:paddingRight="20dp"
+            android:text="No quests yet. Tap + to add one." android:textColor="@color/purple" android:visibility="gone"/>
+        <TextView android:id="@+id/tvWarning" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:gravity="center"
+            android:paddingLeft="36dp" android:paddingRight="36dp" android:textColor="@color/purple" android:textSize="11sp"/>
+    </LinearLayout>
+</ScrollView>

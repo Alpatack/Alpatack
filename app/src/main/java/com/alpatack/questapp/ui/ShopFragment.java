@@ -11,7 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+<<<<<<< HEAD
 import android.widget.ImageView;
+=======
+<<<<<<< HEAD
+=======
+import android.widget.ImageView;
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -59,7 +66,14 @@ public class ShopFragment extends Fragment {
             }
             View card = getLayoutInflater().inflate(R.layout.item_reward, row, false);
             ((TextView) card.findViewById(R.id.tvName)).setText(r.getName());
+<<<<<<< HEAD
             ((ImageView) card.findViewById(R.id.ivIcon)).setImageResource(iconFor(r.getDescription()));
+=======
+<<<<<<< HEAD
+=======
+            ((ImageView) card.findViewById(R.id.ivIcon)).setImageResource(iconFor(r.getDescription()));
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
             TextView price = card.findViewById(R.id.tvPrice);
             price.setText(r.getCost() + " COINS\nREDEEM");
             price.setOnClickListener(v -> {
@@ -91,7 +105,15 @@ public class ShopFragment extends Fragment {
                         .show();
                 return true;
             });
+<<<<<<< HEAD
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, Ui.dp(requireContext(), 140), 1f);
+=======
+<<<<<<< HEAD
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, Ui.dp(requireContext(), 124), 1f);
+=======
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, Ui.dp(requireContext(), 140), 1f);
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
             lp.setMargins(m, m, m, m);
             row.addView(card, lp);
         }
@@ -107,6 +129,11 @@ public class ShopFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     // The reward's category (kept in its description) decides which icon the card shows.
     private int iconFor(String category) {
         if (category == null) return R.drawable.ic_cat_gift;
@@ -120,14 +147,29 @@ public class ShopFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     private void showAdd() {
         View v = getLayoutInflater().inflate(R.layout.dialog_add_wish, null);
         Dialog d = Ui.dialog(requireContext(), v);
         Spinner sp = v.findViewById(R.id.spCategory);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        sp.setAdapter(new ArrayAdapter<>(requireContext(), android.R.layout.simple_spinner_dropdown_item,
+                new String[]{"Clothing", "Shopping", "Food", "Tech", "Travel", "Gift"}));
+=======
+>>>>>>> origin/main
         ArrayAdapter<String> ad = new ArrayAdapter<>(requireContext(), R.layout.spinner_item,
                 new String[]{"Clothing", "Shopping", "Food", "Tech", "Travel", "Gift"});
         ad.setDropDownViewResource(R.layout.spinner_dropdown_item);
         sp.setAdapter(ad);
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         EditText name = v.findViewById(R.id.etName);
         EditText price = v.findViewById(R.id.etPrice);
         v.findViewById(R.id.btnCancel).setOnClickListener(x -> d.dismiss());

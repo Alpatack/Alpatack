@@ -6,6 +6,19 @@ import com.alpatack.questapp.model.*;
 
 import android.app.Dialog;
 import android.content.Intent;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+=======
+>>>>>>> origin/main
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,22 +28,64 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+<<<<<<< HEAD
 public class ProfileFragment extends Fragment {
     private View root;
 
+=======
+<<<<<<< HEAD
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+
+public class ProfileFragment extends Fragment {
+    private View root;
+
+    // Lets the user pick a profile photo from the gallery.
+    private final ActivityResultLauncher<String> picker = registerForActivityResult(
+            new ActivityResultContracts.GetContent(), uri -> {
+                if (uri != null) savePhoto(uri);
+            });
+
+=======
+public class ProfileFragment extends Fragment {
+    private View root;
+
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup c, @Nullable Bundle b) {
         root = inflater.inflate(R.layout.fragment_profile, c, false);
+<<<<<<< HEAD
         root.findViewById(R.id.ivAvatar).setOnClickListener(v -> showAvatarOverlay());
+=======
+<<<<<<< HEAD
+        root.findViewById(R.id.ivAvatar).setOnClickListener(v -> picker.launch("image/*"));
+=======
+        root.findViewById(R.id.ivAvatar).setOnClickListener(v -> showAvatarOverlay());
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         root.findViewById(R.id.btnSettings).setOnClickListener(v ->
                 startActivity(new Intent(requireContext(), SettingsActivity.class)));
         return root;
@@ -52,7 +107,15 @@ public class ProfileFragment extends Fragment {
         ((TextView) root.findViewById(R.id.tvAddress)).setText(Ui.boldLabel("Address\n", s.address.isEmpty() ? "Not set" : s.address));
         ((TextView) root.findViewById(R.id.tvJoined)).setText(Ui.boldLabel("Joined\n", s.joined));
         ((TextView) root.findViewById(R.id.tvLvl)).setText(String.format("LVL %02d", p.getLevel()));
+<<<<<<< HEAD
         ((TextView) root.findViewById(R.id.tvTotal)).setText(p.getTotalExp() + " XP");
+=======
+<<<<<<< HEAD
+        ((TextView) root.findViewById(R.id.tvTotal)).setText(s.totalXp() + " XP");
+=======
+        ((TextView) root.findViewById(R.id.tvTotal)).setText(p.getTotalExp() + " XP");
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         ProgressBar bar = root.findViewById(R.id.bar);
         bar.setMax(p.getMaxExp());
         bar.setProgress(p.getCurrentExp());
@@ -73,6 +136,13 @@ public class ProfileFragment extends Fragment {
         root.findViewById(id).setAlpha(got ? 1f : 0.3f);
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    private void savePhoto(Uri uri) {
+        if (Ui.saveAvatar(requireContext(), uri)) bind();
+=======
+>>>>>>> origin/main
     private void showAvatarOverlay() {
         Dialog d = new Dialog(requireContext());
         d.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -98,5 +168,9 @@ public class ProfileFragment extends Fragment {
         container.setOnClickListener(v -> d.dismiss());
         preview.setOnClickListener(v -> d.dismiss());
         d.show();
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     }
 }

@@ -91,6 +91,11 @@ public class Ui {
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     // Uses one of the built-in alpaca pictures as the profile photo.
     public static boolean savePreset(Context c, int drawableRes) {
         try {
@@ -105,6 +110,10 @@ public class Ui {
         }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     public static CharSequence boldLabel(String label, String rest) {
         SpannableString s = new SpannableString(label + rest);
         s.setSpan(new StyleSpan(Typeface.BOLD), 0, label.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);

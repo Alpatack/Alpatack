@@ -7,7 +7,15 @@ android {
     compileSdk 34
 
     defaultConfig {
+<<<<<<< HEAD
         applicationId "com.alpatack.questapp"
+=======
+<<<<<<< HEAD
+        applicationId "com.alpatack.questapp_ui"
+=======
+        applicationId "com.alpatack.questapp"
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         minSdk 24
         targetSdk 34
         versionCode 1

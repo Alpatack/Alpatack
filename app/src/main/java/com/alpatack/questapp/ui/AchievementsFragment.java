@@ -13,8 +13,16 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
+=======
+<<<<<<< HEAD
+=======
+import android.graphics.ColorMatrix;
+import android.graphics.ColorMatrixColorFilter;
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -38,7 +46,14 @@ public class AchievementsFragment extends Fragment {
 
     private void bind() {
         AppState s = AppState.get(requireContext());
+<<<<<<< HEAD
         s.rollDaily();
+=======
+<<<<<<< HEAD
+=======
+        s.rollDaily();
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         s.manager.checkAchievements();
         s.save();
         ((TextView) root.findViewById(R.id.tvCoins)).setText(String.format("%,d", s.player.getCoin()));
@@ -46,8 +61,16 @@ public class AchievementsFragment extends Fragment {
         // ---- daily check-in ----
         int streak = s.player.getDailyStreak();
         boolean today = s.checkedInToday();
+<<<<<<< HEAD
         int dailyDone = s.player.getDailyQuestsCompleted();
         boolean canCheckIn = dailyDone >= 3;
+=======
+<<<<<<< HEAD
+=======
+        int dailyDone = s.player.getDailyQuestsCompleted();
+        boolean canCheckIn = dailyDone >= 3;
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
         int done = streak == 0 ? 0 : (today ? (streak - 1) % 7 + 1 : streak % 7);
         ((TextView) root.findViewById(R.id.tvCheckText)).setText("You've checked in for " + streak + " consecutive days");
         LinearLayout days = root.findViewById(R.id.llDays);
@@ -63,6 +86,19 @@ public class AchievementsFragment extends Fragment {
             days.addView(tile);
         }
         View btn = root.findViewById(R.id.btnCheckIn);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        ((TextView) root.findViewById(R.id.tvCheckBtn)).setText(today ? "CHECKED IN TODAY" : "CHECK IN TODAY");
+        root.findViewById(R.id.ivCheck).setVisibility(today ? View.VISIBLE : View.GONE);
+        btn.setAlpha(today ? 0.85f : 1f);
+        btn.setOnClickListener(v -> {
+            int reward = s.checkIn();
+            if (reward > 0) Toast.makeText(requireContext(), "+" + reward + " coins!", Toast.LENGTH_SHORT).show();
+            bind();
+        });
+=======
+>>>>>>> origin/main
         TextView tvCheckBtn = root.findViewById(R.id.tvCheckBtn);
         if (today) {
             tvCheckBtn.setText("CHECKED IN TODAY");
@@ -86,6 +122,10 @@ public class AchievementsFragment extends Fragment {
             btn.setClickable(false);
             btn.setOnClickListener(null);
         }
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 
         // ---- milestones + badges ----
         int total = s.manager.getAchievementList().size();
@@ -104,7 +144,14 @@ public class AchievementsFragment extends Fragment {
             ((TextView) row.findViewById(R.id.tvTitle)).setText(a.getTitle());
             ((TextView) row.findViewById(R.id.tvSub)).setText(subFor(a));
             TextView action = row.findViewById(R.id.tvAction);
+<<<<<<< HEAD
             setBadgeLit(row, a.isUnlocked() || a.isClaimed());
+=======
+<<<<<<< HEAD
+=======
+            setBadgeLit(row, a.isUnlocked() || a.isClaimed());
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
             if (a.isClaimed()) {
                 action.setText("Complete");
                 action.setBackgroundResource(R.drawable.bg_btn_outline);
@@ -128,6 +175,11 @@ public class AchievementsFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     // Locked honors are greyed out and dimmed; unlocked ones show full color.
     private void setBadgeLit(View row, boolean lit) {
         ImageView icon = row.findViewById(R.id.ivIcon);
@@ -148,6 +200,10 @@ public class AchievementsFragment extends Fragment {
         }
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     private int iconFor(Achievement a) {
         String t = a.getType();
         if (t.equals("streak")) return R.drawable.ic_flame_outline;

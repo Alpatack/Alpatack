@@ -4,10 +4,21 @@ import com.alpatack.questapp.R;
 import com.alpatack.questapp.data.AppState;
 
 import android.app.DatePickerDialog;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import android.net.Uri;
+import android.os.Bundle;
+=======
+>>>>>>> origin/main
 import android.app.Dialog;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -42,8 +53,18 @@ public class ProfileDetailsActivity extends AppCompatActivity {
 
         avatar = findViewById(R.id.ivAvatar);
         Ui.loadAvatar(this, avatar);
+<<<<<<< HEAD
         avatar.setOnClickListener(v -> chooseProfile());
         findViewById(R.id.btnCamera).setOnClickListener(v -> chooseProfile());
+=======
+<<<<<<< HEAD
+        avatar.setOnClickListener(v -> picker.launch("image/*"));
+        findViewById(R.id.btnCamera).setOnClickListener(v -> picker.launch("image/*"));
+=======
+        avatar.setOnClickListener(v -> chooseProfile());
+        findViewById(R.id.btnCamera).setOnClickListener(v -> chooseProfile());
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 
         EditText full = findViewById(R.id.etFull);
         EditText user = findViewById(R.id.etUser);
@@ -70,6 +91,11 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         });
     }
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
     // "Choose Profile" popup: gallery, or one of the built-in alpacas, then Done.
     private void chooseProfile() {
         View v = getLayoutInflater().inflate(R.layout.dialog_choose_profile, null);
@@ -98,6 +124,10 @@ public class ProfileDetailsActivity extends AppCompatActivity {
         d.show();
     }
 
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
     private void pickBirthday(TextView birth) {
         Calendar c = Calendar.getInstance();
         c.set(2000, Calendar.JANUARY, 1);   // where the picker opens if nothing is set yet

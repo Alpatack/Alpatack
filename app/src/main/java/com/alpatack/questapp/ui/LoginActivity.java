@@ -39,8 +39,16 @@ public class LoginActivity extends AppCompatActivity {
         });
 
         findViewById(R.id.btnLogin).setOnClickListener(v -> {
+<<<<<<< HEAD
 
 
+=======
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
             if (!state.hasAccount()) {
                 Toast.makeText(this, "No account yet. Please sign up first.", Toast.LENGTH_SHORT).show();
             } else if (state.login(name.getText().toString().trim(), pass.getText().toString())) {
@@ -51,9 +59,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
         findViewById(R.id.btnSignup).setOnClickListener(v -> startActivity(new Intent(this, SignupActivity.class)));
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+    }
+=======
+>>>>>>> origin/main
 
 
     }
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 }

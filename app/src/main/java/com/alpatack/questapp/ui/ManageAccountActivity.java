@@ -5,12 +5,23 @@ import com.alpatack.questapp.data.AppState;
 
 import android.app.Dialog;
 import android.content.Intent;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+import android.os.Bundle;
+import android.view.View;
+=======
+>>>>>>> origin/main
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -30,6 +41,12 @@ public class ManageAccountActivity extends AppCompatActivity {
         View v = getLayoutInflater().inflate(R.layout.dialog_delete_account, null);
         Dialog d = Ui.dialog(this, v);
         v.findViewById(R.id.btnCancel).setOnClickListener(x -> d.dismiss());
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        v.findViewById(R.id.btnConfirm).setOnClickListener(x -> {
+=======
+>>>>>>> origin/main
         EditText pass = v.findViewById(R.id.etPassword);
         TextView confirm = v.findViewById(R.id.btnConfirm);
         confirm.setPaintFlags(confirm.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
@@ -38,6 +55,10 @@ public class ManageAccountActivity extends AppCompatActivity {
                 Toast.makeText(this, "Incorrect password", Toast.LENGTH_SHORT).show();
                 return;
             }
+<<<<<<< HEAD
+=======
+>>>>>>> bae7d0b (Stat features enhanced)
+>>>>>>> origin/main
             AppState.get(this).deleteAccount();
             d.dismiss();
             Intent i = new Intent(this, LoginActivity.class);
